@@ -34,8 +34,52 @@
         </div>
     </div>
 
-    
+    <div class="container">
+        <h4>Add Train:</h4>
+        <form>
+            <div class="form-group">
+                <label for="exampleFormControlInput1">Train Name</label>
+                <input type="text" class="form-control" id="train-name" placeholder="Orient Express">
+            </div>
+            <div class="form-group">
+                <label for="exampleFormControlInput1">Destination</label>
+                <input type="text" class="form-control" id="destination-name" placeholder="Incheon">
+            </div>
+            <div class="form-group">
+                <label for="exampleFormControlInput1">First Train Time (HH:mm - military time)</label>
+                <input type="text" class="form-control" id="train-time" placeholder="00:00">
+            </div>
+            <div class="form-group">
+                <label for="exampleFormControlInput1">Frequency (min)</label>
+                <input type="text" class="form-control" id="train-frequency" placeholder="30">
+            </div>
+        </form>
+    </div>
 
+    <br>
+    <hr>
+
+    <div class="container">
+        <h4>Current Train Schedule</h4>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th scope="col">Train Name</th>
+                    <th scope="col">Destination</th>
+                    <th scope="col">Frequency (min)</th>
+                    <th scope="col">Next Arrival</th>
+                    <th scope="col">Minutes Away</th>
+
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Insert train rows here -->
+            </tbody>
+        </table>
+
+
+
+    </div>
 
 </body>
 
