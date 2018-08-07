@@ -1,3 +1,7 @@
 .jumbotron {
     text-align: center;
 }
+
+#refresh-button {
+    margin-bottom: 50px;
+}
