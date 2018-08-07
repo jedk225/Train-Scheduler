@@ -15,6 +15,8 @@ $(document).ready(function () {
 
     $("#submitBTN").click(function (event) {
 
+        //Did not use prevent default. Want the form to clear after submitting
+
         var trainName = $("#train-name").val().trim();
         var destinationName = $("#destination-name").val().trim();
         var trainTime = $("#train-time").val().trim();
