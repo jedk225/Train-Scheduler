@@ -57,7 +57,7 @@ $(document).ready(function () {
 
         // Time apart (remainder)
         var tRemainder = diffTime % tFrequency;
-        console.log(tRemainder);
+        console.log("tRemainder: " + tRemainder);
 
         // Minute Until Train
         var tMinutesTillTrain = tFrequency - tRemainder;
@@ -67,6 +67,7 @@ $(document).ready(function () {
         var nextTrain = moment().add(tMinutesTillTrain, "minutes");
         console.log("ARRIVAL TIME: " + moment(nextTrain).format('LT'));
 
+        console.log("--------");
 
         var nextArrival = $("<td>").text(moment(nextTrain).format('LT'));
         var minutesAway = $("<td>").text(tMinutesTillTrain);
@@ -75,7 +76,7 @@ $(document).ready(function () {
         var $tbody = $("tbody");
         var $tr = $("<tr>");
         $tr.append(userTrain, userDestination, userFrequency, nextArrival, minutesAway);
-        $tbody.append($tr)
+        $tbody.append($tr);
     });
 
     //Refreshes every 5 minutes
