@@ -14,8 +14,6 @@ $(document).ready(function () {
     var database = firebase.database();
 
     $("#submitBTN").click(function (event) {
-        //I want the default to occur on the submit to clear out the text boxes
-        //event.preventDefault();
 
         var trainName = $("#train-name").val().trim();
         var destinationName = $("#destination-name").val().trim();
@@ -28,8 +26,6 @@ $(document).ready(function () {
             time: trainTime,
             frequency: trainFrequency
         });
-
-
 
     });
 

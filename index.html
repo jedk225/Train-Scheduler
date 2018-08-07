@@ -7,6 +7,12 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Train Scheduler</title>
     <link rel="stylesheet" type="text/css" href="assets/css/reset.css">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+        crossorigin="anonymous"></script>
+
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
         crossorigin="anonymous">
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
@@ -22,15 +28,48 @@
     <script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
     <script src="https://www.gstatic.com/firebasejs/5.3.1/firebase.js"></script>
 
-
 </head>
 
 <body>
 
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#">Scheduler</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown"
+            aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="http://www.octa.net/Metrolink/Promotions/Angels-Express-2018/?pageid=8022">OCTA
+                        <span class="sr-only">(current)</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="https://www.metrolinktrains.com">Metrolink</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="https://www.amtrak.com/home.html">Amtrak</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true"
+                        aria-expanded="false">
+                        More Trains
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                        <a class="dropdown-item" href="http://www.octa.net/Metrolink/Promotions/Angels-Express-2018/?pageid=8022">Angels Express</a>
+                        <a class="dropdown-item" href="https://www.pottermore.com/writing-by-jk-rowling/the-hogwarts-express">Hogwarts Express</a>
+                        <a class="dropdown-item" href="https://www.thomasandfriends.com/en-us/">Thomas the Tank Engine</a>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
     <div class="jumbotron jumbotron-fluid">
         <div class="container">
             <h1 class="display-4">Train Schedule</h1>
-            <p class="lead">Enter your info below</p>
+            <p class="lead">Enter your train schedule in the form below. Your data will be added to the timetable.</p>
         </div>
     </div>
 
@@ -81,7 +120,7 @@
 
         <br>
         <button type="button" class="btn btn-secondary" id="refresh-button">Refresh</button>
-        
+
     </div>
 
 </body>
